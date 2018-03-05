@@ -9,6 +9,7 @@ import _debounce from './debounce'
 import _index from './index'
 import isInDom from './isInDom'
 import {insertBefore as _before, insertAfter as _after} from './insertHtmlElements'
+import _serialize from './serialize'
 /*
  * variables global to the plugin
  */
@@ -308,11 +309,6 @@ var _makeEvent = function (name, detail) {
   }
   e.initEvent(name, false, true)
   return e
-}
-
-var _serialize = function (list) {
-  var children = _filter(list.children, _data(list, 'items'))
-  return children
 }
 
 /*
